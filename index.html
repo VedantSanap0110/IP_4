@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="validation.js"></script>
+    <title>Souled Store</title>
+</head>
+<body>
+    <nav>
+        <div> <h2>PrinTee</h2> </div>
+    </nav>
+
+    <section>
+        <form id="orderForm" method="get">
+            <p>Get your Customized T-Shirts </p>
+            <hr>
+            <label>Tagline : </label>
+            <input name="tagline" type="text" placeholder="Enter tagline" required> 
+            <br>
+            <label >Select a color : </label>
+            <select name="color">
+                <option>Red</option>
+                <option>Yellow</option>
+                <option>Blue</option>
+                <option>Green</option>
+                <option>Violet</option>
+            </select>
+            <br>
+            <label>Select your size : </label>
+            <select name="size">
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+            </select>
+            <br>
+            <label>Quantity : </label>
+            <input type="number" name="quantity"  placeholder="Enter quantity you wish to order" min="1" value="1">
+            <br>
+            <label>Select Delivery Date : </label>
+            <input type="date"  name="deliveryDate"/>
+            <br>
+
+
+            <h1>Delivery Details </h1>
+            <hr>
+            <input type="text" id="nameInput" name="name" placeholder="Enter your name" pattern="[A-Za-z\s]{2,50}" title="Please enter a valid name." required> 
+            <br>
+            <input type="text" id="phoneInput" name="phone" placeholder="Enter your phone number" pattern="\d{10}" title="Please enter a valid phone number." required> 
+            <br>
+            <input type="text"  id="addressInput" name="address" placeholder="Enter your address" required> 
+            <br>
+            <textarea  id="messageInput" name="message" placeholder="Add your Special Intructions here..."></textarea> 
+            <br>
+            <input type="checkbox" id="termsCheckbox" name="termsCheckbox"> I accept all terms and condition.
+            <br>
+            <button type="submit" onclick="validateOrder()"> Send Delivery </button>
+        </form>
+
+        <div id="receiptContainer" style="display:none;"></div>
+            <h2>Receipt</h2>
+            <p id="receiptMessage"></p>
+        </div>
+    </section>
+
+</body>
+</html>
